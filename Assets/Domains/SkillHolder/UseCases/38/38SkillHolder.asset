@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89187f397bd4c3642b62eb485f051713, type: 3}
+  m_Name: 38SkillHolder
+  m_EditorClassIdentifier: 
+  skillImage: {fileID: 4752530675005747770, guid: c184e4e47ee7fb548ae60a20f79dc941, type: 3}
+  skillCooldownText: {fileID: 0}
+  skillPrefab: {fileID: 0}
+  transformLocationToInstantiate: {fileID: 0}
+  skillMonoBehaviour: {fileID: 0}
+  key: 0
