@@ -8,7 +8,7 @@ public class ktpHealth : MonoBehaviour
 
     private void Update()
     {
-        if (health <= 0 && GetComponent<PlayerMovement>())
+        if (health <= 0 && GetComponent<ktpPlayerMovement>())
             Die();
     }
 
@@ -20,7 +20,7 @@ public class ktpHealth : MonoBehaviour
 
     public void Die()
     {
-        Destroy(GetComponent<PlayerMovement>());
+        Destroy(GetComponent<ktpPlayerMovement>());
         print("You dead");
     }
 }
