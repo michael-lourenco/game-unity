@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CaitCharacter
   m_EditorClassIdentifier: 
   characterName: Caitlyn
+  hp: 50
   lore: 
   blurb: 
   basicAttack: {fileID: 11400000, guid: 28255f6bd1266404e8e5c293846ef80a, type: 2}

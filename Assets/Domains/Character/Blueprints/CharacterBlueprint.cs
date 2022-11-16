@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class CharacterBlueprint : ScriptableObject
 {
     public string characterName;
+
+    public float hp;
     public string lore;
     public string blurb;
     public SkillBlueprint basicAttack;

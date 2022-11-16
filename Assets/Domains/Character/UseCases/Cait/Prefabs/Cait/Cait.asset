@@ -12,11 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03db8fd9bc922fe4d8562dbcac01e381, type: 3}
   m_Name: Cait
   m_EditorClassIdentifier: 
-  playerName: Cait
+  characterName: Caitlyn
+  hp: 50
   lore: 
   blurb: 
   basicAttack: {fileID: 11400000, guid: 0e1c101b50f9f714c81933dc0687c9f3, type: 2}
   force: 5
+  viewRadius: 0
+  viewAngle: 0
+  targets:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacles:
+    serializedVersion: 2
+    m_Bits: 0
+  visibleTarget: {fileID: 0}
   skills:
   - {fileID: 11400000, guid: a0125694b15eda6458dcba2df8cecaa3, type: 2}
   - {fileID: 11400000, guid: 7f6d15ef61b337e4aad797a2ef0d95c2, type: 2}

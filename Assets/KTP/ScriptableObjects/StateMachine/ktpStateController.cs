@@ -17,22 +17,24 @@ public class ktpStateController : MonoBehaviour
     [HideInInspector] public bool stateBoolVariable;
     [HideInInspector] public float stateTimeElapsed;
 
-    public Transform player;
+    public GameObject enemy;
+    public float timeBetweenAttacks;
     public bool alreadyAttacked;
     public GameObject projectile;
 
-    public LayerMask whatIsGround, whatIsPlayer;
+    public LayerMask whatIsGround, whatIsEnemy;
 
     public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public bool enemyInSightRange, enemyInAttackRange;
 
+    public string tagToFind;
     private bool _isActive;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         skill = GetComponent<SkillMonoBehaviour>();
-        player = GameObject.Find("Caitlyn").transform;
+        enemy = GameObject.FindGameObjectWithTag(tagToFind);//GameObject.Find("Caitlyn");
     }
 
     private void Update()
@@ -77,5 +79,10 @@ public class ktpStateController : MonoBehaviour
             Gizmos.color = currentState.gizmoColor;
             Gizmos.DrawWireSphere(transform.position, 1.5f);
         }
+    }
+
+    public void ResetAttack()
+    {
+        alreadyAttacked = false;
     }
 }

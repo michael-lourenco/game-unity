@@ -6,7 +6,7 @@ public class ktpEnemyAiTutorial : MonoBehaviour
 {
     public NavMeshAgent agent;
 
-    public Transform player;
+    public GameObject player;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -28,7 +28,7 @@ public class ktpEnemyAiTutorial : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Caitlyn").transform;
+        player = GameObject.FindGameObjectWithTag("Player");// GameObject.Find("Caitlyn").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -70,7 +70,7 @@ public class ktpEnemyAiTutorial : MonoBehaviour
 
     private void ChasePlayer()
     {
-        agent.SetDestination(player.position);
+        agent.SetDestination(player.transform.position);
     }
 
     private void AttackPlayer()
@@ -78,7 +78,7 @@ public class ktpEnemyAiTutorial : MonoBehaviour
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
-        transform.LookAt(player);
+        transform.LookAt(player.transform);
 
         if (!alreadyAttacked)
         {

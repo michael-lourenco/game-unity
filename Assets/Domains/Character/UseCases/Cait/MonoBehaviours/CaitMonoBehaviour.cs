@@ -14,6 +14,15 @@ public class CaitMonoBehaviour : MonoBehaviour
     private float force;
     [SerializeField]
     private NavMeshAgent navMeshAgent;
+    public float maxHp;
+    public float currentHp;
+
+    void Awake() {
+        this.maxHp = character.hp;
+        this.currentHp = character.hp;
+
+    }
+
     void Start()
     {
         /*force = character.force;
@@ -53,5 +62,25 @@ public class CaitMonoBehaviour : MonoBehaviour
     public int DoDamage()
     {
         return character.basicAttack.attack;
+    }
+
+    public void TakeDamage(float amount) {
+        this.currentHp -= amount;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "Bullet")
+        {
+            Debug.Log("COLIDIU");
+            this.TakeDamage(other.gameObject.GetComponent<BasicAttack3DMonoBehaviour>().DoDamage());
+            
+
+            Destroy(other.gameObject);
+            if(this.currentHp <= 0f){
+                this.gameObject.SetActive(false);
+            }
+        }
     }
 }
