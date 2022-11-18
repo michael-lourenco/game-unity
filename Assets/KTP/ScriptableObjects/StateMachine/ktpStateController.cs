@@ -30,11 +30,18 @@ public class ktpStateController : MonoBehaviour
     public string tagToFind;
     private bool _isActive;
 
+    public float maxHp;
+    public float currentHp;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         skill = GetComponent<SkillMonoBehaviour>();
         enemy = GameObject.FindGameObjectWithTag(tagToFind);//GameObject.Find("Caitlyn");
+        this.maxHp = enemyStats.hp;
+        this.currentHp = enemyStats.hp;
+
+
     }
 
     private void Update()
@@ -44,9 +51,11 @@ public class ktpStateController : MonoBehaviour
     }
     public void InitializeAI(bool activate, List<Transform> waiPointList)
     {
-        wayPoints = waiPointList;
-        _isActive = activate;
-        agent.enabled = _isActive;
+        if(!_isActive) {
+            wayPoints = waiPointList;
+            _isActive = activate;
+            agent.enabled = _isActive;
+        }
     }
 
     public void TransitionToState(ktpState nexState)
@@ -81,8 +90,28 @@ public class ktpStateController : MonoBehaviour
         }
     }
 
+    public void TakeDamage(float amount) {
+        this.currentHp -= amount;
+    }
+
     public void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+
+        private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "Bullet")
+        {
+            Debug.Log("COLIDIU");
+            this.TakeDamage(other.gameObject.GetComponent<BasicAttack3DMonoBehaviour>().DoDamage());
+            
+
+            Destroy(other.gameObject);
+            if(this.currentHp <= 0f){
+                this.gameObject.SetActive(false);
+            }
+        }
     }
 }

@@ -12,4 +12,10 @@ public class ktpGameManager : MonoBehaviour
         foreach(var controller in _controllers)
             controller.InitializeAI(true, wayPoints);
     }
+
+    private void Update() {
+        _controllers = FindObjectsOfType<ktpStateController>();
+        foreach(var controller in _controllers)
+            controller.InitializeAI(true, wayPoints);
+    }
 }

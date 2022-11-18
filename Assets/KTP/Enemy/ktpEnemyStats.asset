@@ -18,3 +18,4 @@ MonoBehaviour:
   damage: 10
   searchDuration: 2
   searchingTurnSpeed: 120
+  hp: 50

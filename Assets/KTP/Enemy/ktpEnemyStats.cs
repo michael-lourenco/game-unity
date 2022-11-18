@@ -11,5 +11,7 @@ public class ktpEnemyStats : ScriptableObject
     public int damage;
     public int searchDuration;
     public int searchingTurnSpeed;
+
+    public float hp;
     
 }
