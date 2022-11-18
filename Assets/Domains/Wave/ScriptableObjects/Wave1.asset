@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Wave1
   m_EditorClassIdentifier: 
   <EnemiesInWave>k__BackingField:
-  - {fileID: 7019933119763044030, guid: 1adb2e1787ffd84468492c60a8c650d8, type: 3}
-  - {fileID: 7019933119763044030, guid: 1adb2e1787ffd84468492c60a8c650d8, type: 3}
-  - {fileID: 7019933119763044030, guid: 1adb2e1787ffd84468492c60a8c650d8, type: 3}
-  - {fileID: 7019933119763044030, guid: 1adb2e1787ffd84468492c60a8c650d8, type: 3}
-  - {fileID: 7019933119763044030, guid: 1adb2e1787ffd84468492c60a8c650d8, type: 3}
-  - {fileID: 7019933119763044030, guid: 1adb2e1787ffd84468492c60a8c650d8, type: 3}
+  - {fileID: 4877350433597120665, guid: 19f77feb5d3c41347b803175cfb391bf, type: 3}
+  - {fileID: 4877350433597120665, guid: 19f77feb5d3c41347b803175cfb391bf, type: 3}
+  - {fileID: 4877350433597120665, guid: 19f77feb5d3c41347b803175cfb391bf, type: 3}
+  - {fileID: 4877350433597120665, guid: 19f77feb5d3c41347b803175cfb391bf, type: 3}
+  - {fileID: 4877350433597120665, guid: 19f77feb5d3c41347b803175cfb391bf, type: 3}
+  - {fileID: 4877350433597120665, guid: 19f77feb5d3c41347b803175cfb391bf, type: 3}
   <TimeBeforeThisWave>k__BackingField: 5
   <NumberToSpawn>k__BackingField: 6

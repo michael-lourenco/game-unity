@@ -51,9 +51,9 @@ GameObject:
   - component: {fileID: 4877350433597120659}
   - component: {fileID: 4877350433597120660}
   - component: {fileID: 4877350433597120661}
-  m_Layer: 6
-  m_Name: CaitlynSoldier
-  m_TagString: Player
+  m_Layer: 7
+  m_Name: MinionRanged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,19 +127,21 @@ MonoBehaviour:
   lastKnownTargetPosition: {x: 0, y: 0, z: 0}
   stateBoolVariable: 0
   stateTimeElapsed: 0
-  player: {fileID: 4877350433597120657}
+  enemy: {fileID: 0}
+  timeBetweenAttacks: 1
   alreadyAttacked: 0
   projectile: {fileID: 7938348632488219091, guid: 0241104c483ad884fa1703b6540483f5, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 55
-  whatIsPlayer:
+  whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 128
-  sightRange: 50
-  attackRange: 20
-  playerInSightRange: 0
-  playerInAttackRange: 0
+    m_Bits: 0
+  sightRange: 5
+  attackRange: 5
+  enemyInSightRange: 0
+  enemyInAttackRange: 0
+  tagToFind: Player
 --- !u!114 &4877350433597120670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +171,7 @@ MonoBehaviour:
   viewAngle: 45
   targets:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   obstacles:
     serializedVersion: 2
     m_Bits: 0
