@@ -51,7 +51,8 @@ public class ktpStateController : MonoBehaviour
     }
     public void InitializeAI(bool activate, List<Transform> waiPointList)
     {
-        if(!_isActive) {
+        if (!_isActive)
+        {
             wayPoints = waiPointList;
             _isActive = activate;
             agent.enabled = _isActive;
@@ -66,18 +67,21 @@ public class ktpStateController : MonoBehaviour
             OnExitState();
         }
     }
-    
-    public bool HasTimeElapsed(float duration) {
-        stateTimeElapsed +=Time.deltaTime;
-        if(stateTimeElapsed >= duration) {
+
+    public bool HasTimeElapsed(float duration)
+    {
+        stateTimeElapsed += Time.deltaTime;
+        if (stateTimeElapsed >= duration)
+        {
             stateTimeElapsed = 0;
             return true;
         }
-        else 
+        else
             return false;
     }
 
-    private void OnExitState(){
+    private void OnExitState()
+    {
         stateBoolVariable = false;
         stateTimeElapsed = 0;
     }
@@ -90,7 +94,8 @@ public class ktpStateController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float amount) {
+    public void TakeDamage(float amount)
+    {
         this.currentHp -= amount;
     }
 
@@ -99,17 +104,18 @@ public class ktpStateController : MonoBehaviour
         alreadyAttacked = false;
     }
 
-        private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
 
         if (other.tag == "Bullet")
         {
             Debug.Log("COLIDIU");
             this.TakeDamage(other.gameObject.GetComponent<BasicAttack3DMonoBehaviour>().DoDamage());
-            
+
 
             Destroy(other.gameObject);
-            if(this.currentHp <= 0f){
+            if (this.currentHp <= 0f)
+            {
                 this.gameObject.SetActive(false);
             }
         }

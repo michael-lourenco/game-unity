@@ -14,10 +14,11 @@ public class ktpLookDecision : ktpDecision
         Debug.Log("ENTER IN KTP LOOK DECISION");
         ktpFieldOfView fov = controller.GetComponent<ktpFieldOfView>();
         if(fov == null) return false;
-        if(fov.visibleTarget != null && fov.visibleTarget.GetComponent<ktpPlayerMovement>()){
+        if(fov.visibleTarget != null){
             controller.target = fov.visibleTarget;
             return true;
         }
+
         return false;
     }
 }

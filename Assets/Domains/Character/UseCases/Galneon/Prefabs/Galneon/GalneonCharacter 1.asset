@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03db8fd9bc922fe4d8562dbcac01e381, type: 3}
+  m_Name: GalneonCharacter 1
+  m_EditorClassIdentifier: 
+  characterName: Galneon
+  hp: 580
+  hpperlevel: 107
+  mp: 315
+  mpperlevel: 35
+  movespeed: 325
+  armor: 28
+  armorperlevel: 4.7
+  spellblock: 30
+  spellblockperlevel: 1.3
+  attackrange: 650
+  hpregen: 3.5
+  hpregenperlevel: 0.55
+  mpregen: 7.4
+  mpregenperlevel: 0.55
+  crit: 0
+  critperlevel: 0
+  attackdamage: 62
+  attackdamageperlevel: 3.8
+  attackspeedoffset: 4
+  attackspeedperlevel: 4
+  attackspeed: 0.681
+  lore: 
+  blurb: 
+  basicAttack: {fileID: 11400000, guid: 28255f6bd1266404e8e5c293846ef80a, type: 2}
+  force: 20
+  viewRadius: 0
+  viewAngle: 0
+  targets:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacles:
+    serializedVersion: 2
+    m_Bits: 0
+  visibleTarget: {fileID: 0}
+  skills:
+  - {fileID: 11400000, guid: b016aeaf02993f5409d2673ab34f4186, type: 2}
+  stats:
+  - {fileID: 11400000, guid: 3d2150ee2ca80454a998315c29dff8bc, type: 2}
+  - {fileID: 11400000, guid: f2f5ecd070af9234c949d16fc914ec28, type: 2}
+  - {fileID: 11400000, guid: ba594d57a3c54754a9a053c213c6261e, type: 2}
+  - {fileID: 11400000, guid: 12f9ccefc001a3444aa7b35455eb4048, type: 2}
+  - {fileID: 11400000, guid: a5003e1322e694145a38c1cbe9afaa14, type: 2}
+  - {fileID: 11400000, guid: 5e7547bd6057d0848b7b7b48eebb97dc, type: 2}
+  - {fileID: 11400000, guid: c6c54ad7a2c6d134b84a59a0a15d7f2d, type: 2}
+  - {fileID: 11400000, guid: 3fa9256f47658724d8915735933200f8, type: 2}
+  - {fileID: 11400000, guid: e76fff8300a095f4c8b8d96dfe4273c3, type: 2}
+  - {fileID: 11400000, guid: 09fcafde17281dd44b600f2a51f252dd, type: 2}
+  - {fileID: 11400000, guid: 21982591d838d5a4b9a7486e6ebbf9a3, type: 2}
+  - {fileID: 11400000, guid: e796268a357d1c34f8bf85a1e6a4c32f, type: 2}
+  - {fileID: 11400000, guid: 2f454529d46e899409033fdd50701baf, type: 2}
+  - {fileID: 11400000, guid: 296fc1cc4f9afb34cbafa1266b79520c, type: 2}
+  - {fileID: 11400000, guid: b41bb6337faaae540b715188378eb069, type: 2}
+  - {fileID: 11400000, guid: 2fd343e68b5dc1b4c835f2eefce5f781, type: 2}
+  - {fileID: 11400000, guid: 816e139110274c0458ddc8f3b2b0a104, type: 2}
+  - {fileID: 11400000, guid: 064fa882cdced53449e9bad6955e3c54, type: 2}
+  - {fileID: 11400000, guid: b2a530cbe6f1a904fa2b640128ac460b, type: 2}
+  - {fileID: 11400000, guid: c74fb43706c23bc42ab31fdce37784c9, type: 2}
+  rotationPointTransform: {fileID: 0}
