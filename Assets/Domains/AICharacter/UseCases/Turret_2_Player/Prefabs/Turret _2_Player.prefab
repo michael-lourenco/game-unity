@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 2277781604604609556}
   - component: {fileID: 2298884085639965356}
   - component: {fileID: 2288899342760297608}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Gun 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 2277781608210302160}
   - component: {fileID: 2298884085537799188}
   - component: {fileID: 2288899345668961346}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: PylonElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 2277781605175908420}
   - component: {fileID: 2298884092725397826}
   - component: {fileID: 2288899345501546940}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Pylon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 2277781605504960294}
   - component: {fileID: 2298884092088266732}
   - component: {fileID: 2288899342128190216}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: BaseElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 2277781607689413620}
   - component: {fileID: 2298884088640436896}
   - component: {fileID: 2288899345130583304}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Gun 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,9 +524,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2277781608224659306}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Turret _2_Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 2277781605159415464}
   - component: {fileID: 2298884085911989326}
   - component: {fileID: 2288899348642122784}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 2277781607276723802}
   - component: {fileID: 2298884088678872606}
   - component: {fileID: 2288899341821436824}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +728,8 @@ GameObject:
   - component: {fileID: 2277781605496610950}
   - component: {fileID: 2298884085288687246}
   - component: {fileID: 2288899343088308570}
-  m_Layer: 8
+  - component: {fileID: 8722095369232056980}
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,3 +803,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &8722095369232056980
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274869981118873204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 5.5
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
