@@ -69,7 +69,6 @@ public class CharacterBlueprint : ScriptableObject
 
   public List<SkillBlueprint> skills;
 
-  public List<StatsBlueprint> stats;
 
   public virtual void Activate(GameObject parent) {}
   

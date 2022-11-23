@@ -7,29 +7,16 @@ public class CharacterMonoBehaviour : MonoBehaviour
 {
     public CharacterBlueprint characterBlueprint;
     private string characterName;
-    private int currentHp;
-    private int maxHp;
+    private float currentHp;
+    private float maxHp;
 
     void Start()
     {
         characterName = characterBlueprint.characterName;
-        maxHp = getHp();
+        maxHp = characterBlueprint.hp;
         currentHp = maxHp;
     }
 
-    public int getHp()
-    {
-        var hp = 0;
-        characterBlueprint.stats.Find(x => x.statsName.Equals("hp"));
-        foreach (StatsBlueprint status in characterBlueprint.stats)
-        {
-            if (status.statsName == "hp")
-            {
-                hp = (int)status.value;
-            }
-        }
-        return hp;
-    }
 
 
     void Update()
