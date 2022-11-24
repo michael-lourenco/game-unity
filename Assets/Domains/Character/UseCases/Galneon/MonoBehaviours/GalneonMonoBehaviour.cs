@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class GalneonMonoBehaviour : MonoBehaviour
 {
     private StateMachine stateMachine = new StateMachine();
     public GalneonCharacter character;
+    public GameObject hud;
     private Vector3 mousePos;
     private Camera mainCamera;
     private Rigidbody2D rb;
@@ -25,6 +27,14 @@ public class GalneonMonoBehaviour : MonoBehaviour
 
     void Start()
     {
+
+        //Observação: falta o ability power e o ability raste
+        GameObject.Find("TextArmor").GetComponent<TextMeshProUGUI>().text = character.armor.ToString();
+        GameObject.Find("TextAttackDamage").GetComponent<TextMeshProUGUI>().text = character.attackdamage.ToString();
+        GameObject.Find("TextAttackSpeed").GetComponent<TextMeshProUGUI>().text = character.attackspeed.ToString();
+        GameObject.Find("TextCrit").GetComponent<TextMeshProUGUI>().text = character.crit.ToString();
+        GameObject.Find("TextSpellblock").GetComponent<TextMeshProUGUI>().text = character.spellblock.ToString();
+        GameObject.Find("TextMoveSpeed").GetComponent<TextMeshProUGUI>().text = character.movespeed.ToString();
         /*force = character.force;
 
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();

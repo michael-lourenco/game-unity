@@ -1503,6 +1503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: bf4ccfa9d059c594a9a8fbb0e2003406, type: 2}
+  hud: {fileID: 383809997619965935, guid: afce8d6c69b91bf46aca5be56f96e328, type: 3}
   navMeshAgent: {fileID: -3919722593319469841}
   maxHp: 0
   currentHp: 0

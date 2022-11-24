@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
  
 [CreateAssetMenu(fileName = "Character", menuName = "ScriptableObjects/Characters", order = 1)]
 public class CharacterBlueprint : ScriptableObject

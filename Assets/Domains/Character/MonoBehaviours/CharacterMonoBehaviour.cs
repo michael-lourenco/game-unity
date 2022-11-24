@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMonoBehaviour : MonoBehaviour
@@ -18,7 +15,6 @@ public class CharacterMonoBehaviour : MonoBehaviour
     }
 
 
-
     void Update()
     {
 
@@ -29,7 +25,8 @@ public class CharacterMonoBehaviour : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public int DoDamage() {
+    public int DoDamage()
+    {
         return characterBlueprint.basicAttack.attack;
     }
 
