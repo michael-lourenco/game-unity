@@ -16,7 +16,7 @@ public class BasicAttack3DSkill : SkillBlueprint
         bullet.GetComponent<Rigidbody>().velocity = transformLocationToInstantiate.forward * 20;
 
         // destrua este objeto após o tempo definido em life. melhorar este código para vir de fora
-       // Destroy(parent, life);
+        //Destroy(parent, life);
     }
 
     public override void BeginCooldown(GameObject parent)

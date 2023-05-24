@@ -13,10 +13,10 @@ public class ktpChaseAction : ktpAction
     private void Chase(ktpStateController controller)
     {
         Debug.Log("ENTER IN KTP CHASE ACTION");
-        ktpEnemy enemy = controller.GetComponent<ktpEnemy>();
+        //ktpCharAI enemy = controller.GetComponent<ktpCharAI>();
 
-        enemy.currentState = CurrentState.Attack;
-        controller.agent.speed = controller.enemyStats.runSpeed;
+        //enemy.currentState = CurrentState.Attack;
+        controller.agent.speed = controller.ktpCharAIStats.runSpeed;
 
         ktpFieldOfView fov = controller.GetComponent<ktpFieldOfView>();
         if (fov == null) return;

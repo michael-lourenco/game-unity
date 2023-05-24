@@ -16,21 +16,24 @@ public class ktpAttackAction : ktpAction
         if (controller.enemy != null && controller.enemy.activeSelf)
         {
 
-            ktpEnemy enemy = controller.GetComponent<ktpEnemy>();
-            enemy.currentState = CurrentState.Attack;
+            //ktpCharAI enemy = controller.GetComponent<ktpCharAI>();
+           // enemy.currentState = CurrentState.Attack;
             Debug.Log("ATACOU!!!");
+            
+           
+            
             // FieldOfView fov = controller.GetComponent<FieldOfView>();
             // if (fov == null) return;
             // if (!controller.stateBoolVariable)
             // {
-            //     controller.stateTimeElapsed = controller.enemyStats.attackRate;
+            //     controller.stateTimeElapsed = controller.ktpCharAIStats.attackRate;
             //     controller.stateBoolVariable = true;
             // }
             // Debug.Log("FIELD OR VIEW 1");
             // if(fov.visibleTarget != null){
             //     Debug.Log("FIELD OR VIEW 2");
-            //     /*if(controller.HasTimeElapsed(controller.enemyStats.attackRate)){
-            //         // controller.shoot.ShootPlayer(controller.enemyStats.damage, controller.target.GetComponent<Health>());
+            //     /*if(controller.HasTimeElapsed(controller.ktpCharAIStats.attackRate)){
+            //         // controller.shoot.ShootPlayer(controller.ktpCharAIStats.damage, controller.target.GetComponent<Health>());
             //         Debug.Log("Atirou");
             //     }*/
             //     Debug.Log("ATIROU");
@@ -53,20 +56,20 @@ public class ktpAttackAction : ktpAction
             //     }
             // }
 
-            controller.agent.SetDestination(controller.transform.position);
+            //controller.agent.SetDestination(controller.transform.position);
 
-            controller.transform.LookAt(controller.enemy.transform);
+           // controller.transform.LookAt(controller.enemy.transform);
 
             if (!controller.alreadyAttacked)
             {
+                SkillMonoBehaviour skillToUse = controller.projectile.GetComponent<SkillMonoBehaviour>();
+
                 ///Attack code here
-                Rigidbody rb = Instantiate(controller.projectile, controller.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-                rb.AddForce(controller.transform.forward * 32f, ForceMode.Impulse);
-                rb.AddForce(controller.transform.up * 8f, ForceMode.Impulse);
+                skillToUse.skill.Activate(controller.projectile, controller.pointToInstantiateFire);
                 ///End of attack code
 
                 controller.alreadyAttacked = true;
-                controller.Invoke(nameof(controller.ResetAttack), controller.timeBetweenAttacks);
+                controller.Invoke(nameof(controller.ResetAttack), skillToUse.skill.cooldownTime);
             }
         } else if(GameObject.FindGameObjectWithTag(controller.tagToFind)){
              controller.enemy = GameObject.FindGameObjectWithTag(controller.tagToFind);

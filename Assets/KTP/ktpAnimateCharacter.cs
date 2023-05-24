@@ -23,4 +23,3 @@ public class ktpAnimateCharacter : MonoBehaviour
         animator.SetBool("isWalking", false);
     }
 }
-

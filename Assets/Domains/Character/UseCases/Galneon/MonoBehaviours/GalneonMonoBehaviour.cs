@@ -22,13 +22,12 @@ public class GalneonMonoBehaviour : MonoBehaviour
     void Awake() {
         this.maxHp = character.hp;
         this.currentHp = character.hp;
-
     }
 
     void Start()
     {
 
-        //Observação: falta o ability power e o ability raste
+        //Observação: falta o ability power e o ability haste
         GameObject.Find("TextArmor").GetComponent<TextMeshProUGUI>().text = character.armor.ToString();
         GameObject.Find("TextAttackDamage").GetComponent<TextMeshProUGUI>().text = character.attackdamage.ToString();
         GameObject.Find("TextAttackSpeed").GetComponent<TextMeshProUGUI>().text = character.attackspeed.ToString();

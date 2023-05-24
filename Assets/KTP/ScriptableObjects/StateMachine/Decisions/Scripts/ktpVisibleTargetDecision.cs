@@ -12,7 +12,7 @@ public class ktpVisibleTargetDecision : ktpDecision
 
     private bool TargetNotVisible(ktpStateController controller){
         Debug.Log("ENTER IN KTP VISIBLE TARGET DECISION");
-        controller.transform.Rotate(0, controller.enemyStats.searchingTurnSpeed * Time.deltaTime, 0);
-        return controller.HasTimeElapsed(controller.enemyStats.searchDuration);
+        controller.transform.Rotate(0, controller.ktpCharAIStats.searchingTurnSpeed * Time.deltaTime, 0);
+        return controller.HasTimeElapsed(controller.ktpCharAIStats.searchDuration);
     }
 }

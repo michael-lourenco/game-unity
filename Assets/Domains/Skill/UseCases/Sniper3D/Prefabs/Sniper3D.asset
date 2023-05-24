@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf43c9e2477a5149b4f3e2992867362, type: 3}
   m_Name: Sniper3D
   m_EditorClassIdentifier: 
+  skillSprite: {fileID: 0}
   skillName: Sniper3D
   attack: 50
   force: 50
-  cooldownTime: 20
+  cooldownTime: 6
   activeTime: 0.1

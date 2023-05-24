@@ -12,9 +12,10 @@ public class ktpPatrolAction : ktpAction
 
     private void Patrol(ktpStateController controller){
         Debug.Log("ENTER IN KTP PATROL ACTION");
-        ktpEnemy enemy = controller.GetComponent<ktpEnemy>();
-        enemy.currentState = CurrentState.Patrol;
-        controller.agent.speed = controller.enemyStats.walkSpeed;
+       // ktpCharAI enemy = controller.GetComponent<ktpCharAI>();
+       // enemy.currentState = CurrentState.Patrol;
+        controller.agent.speed = controller.ktpCharAIStats.walkSpeed;
+        controller.agent.stoppingDistance = controller.ktpCharAIStats.stoppingDistance;
         controller.agent.destination = controller.wayPoints[controller.nextWaypoint].position;
         controller.agent.Resume();
         if(controller.agent.remainingDistance <= controller.agent.stoppingDistance && !controller.agent.pathPending){

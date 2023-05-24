@@ -13,7 +13,7 @@ public class Sniper3DSkill : SkillBlueprint
         Debug.Log("Sniper3D SKILL");
         //Instantiate(parent, transformLocationToInstantiate.position, Quaternion.identity);
         var bullet = Instantiate(parent, transformLocationToInstantiate.position, transformLocationToInstantiate.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = transformLocationToInstantiate.forward * 50;
+        bullet.GetComponent<Rigidbody>().velocity = transformLocationToInstantiate.forward * 30;
 
         // destrua este objeto após o tempo definido em life. melhorar este código para vir de fora
        // Destroy(parent, life);

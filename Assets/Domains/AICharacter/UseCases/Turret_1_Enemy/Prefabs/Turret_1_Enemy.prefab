@@ -343,9 +343,15 @@ GameObject:
   - component: {fileID: 573419482759642826}
   - component: {fileID: 544435634702299860}
   - component: {fileID: 552450052217870126}
+  - component: {fileID: 512549055447130795}
+  - component: {fileID: 7343823546748836365}
+  - component: {fileID: 594628552564258796}
+  - component: {fileID: 8128580333761495344}
+  - component: {fileID: 4644096534140478461}
+  - component: {fileID: 830916616025419307}
   m_Layer: 7
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,6 +423,132 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &512549055447130795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574360167725714374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c6ac2e3d2f326439babf702c914db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 11400000, guid: 1d516b3179d8d44469a82aa3fd561fe2, type: 2}
+  currentState: {fileID: 11400000, guid: 65970385c77f7854fadf4b91d113dcf9, type: 2}
+  remainState: {fileID: 11400000, guid: 0ab2fd7817236624e9d10687d93bc0b6, type: 2}
+  agent: {fileID: 0}
+  skill: {fileID: 0}
+  wayPoints: []
+  nextWaypoint: 0
+  target: {fileID: 0}
+  lastKnownTargetPosition: {x: 0, y: 0, z: 0}
+  stateBoolVariable: 0
+  stateTimeElapsed: 0
+  enemy: {fileID: 0}
+  timeBetweenAttacks: 1
+  alreadyAttacked: 0
+  projectile: {fileID: 7938348632488219091, guid: 0241104c483ad884fa1703b6540483f5, type: 3}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 64
+  sightRange: 50
+  attackRange: 50
+  enemyInSightRange: 0
+  enemyInAttackRange: 0
+  tagToFind: Player
+  maxHp: 0
+  currentHp: 0
+--- !u!114 &7343823546748836365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574360167725714374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af925c144c0eedd44817e06213df5354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 0
+  viewAngle: 0
+  targets:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacles:
+    serializedVersion: 2
+    m_Bits: 0
+  visibleTarget: {fileID: 0}
+--- !u!195 &594628552564258796
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574360167725714374}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 2.1046772
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.077403
+  m_BaseOffset: 1.0387015
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &8128580333761495344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574360167725714374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f35f3344bfa14d46bc17d82731cc4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 1
+--- !u!114 &4644096534140478461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574360167725714374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cbf05cc6dd0ef4ea026e5b1aa35fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 11400000, guid: 28255f6bd1266404e8e5c293846ef80a, type: 2}
+  mousePos: {x: 0, y: 0, z: 0}
+  mainCamera: {fileID: 0}
+  rb: {fileID: 0}
+  force: 0
+--- !u!65 &830916616025419307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574360167725714374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.5772514, y: 8.051558, z: 3.6371093}
+  m_Center: {x: -0.18394874, y: -2.987077, z: -0.002127176}
 --- !u!1 &574360168732404094
 GameObject:
   m_ObjectHideFlags: 0

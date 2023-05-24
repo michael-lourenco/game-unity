@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ktpEnemyAiTutorial : MonoBehaviour
+public class ktpCharAIAiTutorial : MonoBehaviour
 {
     public NavMeshAgent agent;
 
